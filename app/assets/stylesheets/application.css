@@ -36,9 +36,9 @@ footer{
     padding-left: 375px;
 }
 
-footer li{
+footer ul li{
     list-style-type: none;
-    display: block;
+   
 }
 
 thumbnail sub{
