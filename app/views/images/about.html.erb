@@ -20,7 +20,6 @@
     <%= stylesheet_link_tag "application.css" %>
 </head>
 <body>
-
  <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -32,7 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> -->
-                <a class="navbar-brand" href="/images/index"><span>image portal</span></a> 
+                <a class="navbar-brand" href="/images/index"><span> image portal</span></a> 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,12 +49,8 @@
         </div>
         <!-- /.container -->
     </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-    
-
-        <div class="row">
+       <div class="container">
+       <div class="row">
     
             <div class="col-lg-12 text-center">
                                 <sub>art // design // fashion </sub>
@@ -75,74 +70,35 @@
             
             </div> 
         </div>
-        <!-- /.row -->
-        </div>
-      <!-- /.container -->
-  
+
+        <div id="about" class="row">
     
-<!-- /.imageboard -->
-<div class="container">
-  <!-- <div class="row"> -->
-    <div class="col-lg-12">
-    <br>
-    <br>
-        
-          
-                <% if @images %>
-                <% @images.each do |image| %>
-                  <div class="col-md-4">
-                
-                         <!-- <div class='panel panel-default'> -->
-                         <div class='thumbnail'>
-                         <a href="/images/<%= image.id %>">
-                        <%= image_tag image.avatar.url %>
-                        </a>
-                          <!--   <li class="list-group-item"> --> 
-                            <%= image_tag image.title, {class: "list-group-item"} %>
-                      
-                            <a href="/images/<%= image.id %>">Display</a>
-        
-                            
-                        
-                        </div>
-                   
-                       <!-- </div> -->
-                        <!--  <sub><%= image_tag image.created_at %></sub> -->
-                  </div>
-                <% end %>
-                <% end %>
-          
-       
+    
+    
     </div>
-  <!--  </div> -->
+    <div class="col-md-4">
+    </div>
+    
+    <div class="col-md-4">
  
-<!-- /.imageboard -->
+    <div class="thumbnail">
+    <p>Welcome to Image Portal! A platform for art, design, and fashion related images! The application is currently under construction and expected updates are to include: user interaction and sharing to social media! For now, you can use Image Portal to post the most<em> stellar</em> of images. Why? Because the web needs a place where art, design, and fashion are taken <em>seriously</em>. Content may include: paintings, sculpture, graphic design, gif animations, album covers, photography [ fashion, nature, architectural ].</p>
     
+    <p><strong>Rules: </strong></p>
+    <ul>
+    <li>1. All content must be legal in the United States</li>
+    <li>2. Content must be artistic</li>
+    <li>3. No pornography</li>
+    <li>4. No selfies</li>
+    </ul>
+    <p><strong>Please post according to the rules and stay synchronous with the themes of art, design, and fashion related material. Keep Image Portal a safe and friendly community.  <em>Thank You.</em></strong></p>
     
+    </div>
+    </div>
     
-     <!-- Footer -->
-  
-
-   </div> 
-    <!-- /.container -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                  
-                     <p>Copyright &copy; Image Portal 2016</p>
-                     
-                  
-                
-                </div>
-            </div>
-        </footer>
+    <div class="col-md-4">
+    </div>
     
-   
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
- 
+    </div>
 </body>
 </html>

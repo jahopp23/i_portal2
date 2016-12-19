@@ -19,9 +19,8 @@
     <%= stylesheet_link_tag "thumbnail-gallery.css" %>
     <%= stylesheet_link_tag "application.css" %>
 </head>
-<body>
 
- <!-- Navigation -->
+<body> <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,7 +37,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                       
+                      <!--  <a href="/images/new">Post Image</a> -->
                     </li>
                     <li>
                    <!--      <a href="https://github.com/jahopp23/image_portal2">Code</a> -->
@@ -50,99 +49,38 @@
         </div>
         <!-- /.container -->
     </nav>
-
-    <!-- Page Content -->
+    
     <div class="container">
-    
-
-        <div class="row">
-    
-            <div class="col-lg-12 text-center">
-                                <sub>art // design // fashion </sub>
-                <h3><strong>{ <span class="glyphicon glyphicon-picture"></span> }</strong></h3>               
-              
-  <thead>
-    <tr>
-      <th><a href="/images/new">post image</p></th>
-      <th><a href="/about">about</a></th>
-
-    </tr>
-    </thead>
-    
-                  
-            
-                
-            
-            </div> 
-        </div>
-        <!-- /.row -->
-        </div>
-      <!-- /.container -->
-  
-    
-<!-- /.imageboard -->
-<div class="container">
-  <!-- <div class="row"> -->
-    <div class="col-lg-12">
-    <br>
-    <br>
-        
-          
-                <% if @images %>
-                <% @images.each do |image| %>
-                  <div class="col-md-4">
-                
-                         <!-- <div class='panel panel-default'> -->
-                         <div class='thumbnail'>
-                         <a href="/images/<%= image.id %>">
-                        <%= image_tag image.avatar.url %>
-                        </a>
-                          <!--   <li class="list-group-item"> --> 
-                            <%= image_tag image.title, {class: "list-group-item"} %>
-                      
-                            <a href="/images/<%= image.id %>">Display</a>
-        
-                            
-                        
-                        </div>
-                   
-                       <!-- </div> -->
-                        <!--  <sub><%= image_tag image.created_at %></sub> -->
-                  </div>
-                <% end %>
-                <% end %>
-          
+        <article class="fimage">
+          <div class="container">
+             <div class="col-md-4">
+             <p> <%= @image.title %></p>
+             <br>
+             <p><%= @image.created_at %></p>
+             <p><a href="/images/index">Back to Index</a></p>
+             </div>
+             <div class="col-md-4">
+             
+                 <%= image_tag @image.avatar.url %>
+                    
+                 
+            </div>
+            <div class="col-md-4">
        
-    </div>
-  <!--  </div> -->
- 
-<!-- /.imageboard -->
-    
-    
-    
-     <!-- Footer -->
-  
-
-   </div> 
-    <!-- /.container -->
-        <footer>
+            </div>
+            </div>
+          </div>
+      </article>
+       <footer>
             <div class="row">
                 <div class="col-lg-12">
                   
                      <p>Copyright &copy; Image Portal 2016</p>
-                     
-                  
+                    
                 
                 </div>
             </div>
         </footer>
-    
-   
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
- 
+</div>
 </body>
 </html>
