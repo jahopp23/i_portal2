@@ -1,0 +1,18 @@
+class SessionsController < A  def login
+      @user = User.find(params[:user])
+      if @user && @user.authenticate(params[:user][:password])
+          session[:user_id] = @user.id
+          redirect_to 'images/index'
+
+      else
+          flash[:login_errors] = ["Invalid Credentials"]
+          redirect_to '/'
+      end
+  end
+
+  def logout
+        session[:user_id] = nil 
+        redirect_to '/'
+  end
+
+end

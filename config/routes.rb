@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
   
-  root 'images#index'
-  
-  get 'sessions/login'
 
-  get 'sessions/logout'
-
-  get 'users/main'
+  root 'sessions#new'
   
-  get 'create' => 'users#create'
+  get 'sessions/new' => 'sessions#new'
   
-  post 'login' => 'sessions#login' 
+  post 'sessions' => 'sessions#create'
   
-  get 'logout' => 'session#logout' 
+  delete 'sessions' => 'sessions#destroy'
+  
+  post 'images' => 'images#create'
   
   get 'images' => 'images#index'
   
@@ -28,7 +25,7 @@ Rails.application.routes.draw do
   
   delete 'destroy' => 'images#destroy'
 
-  resources :user, :images
+  resources :images
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
