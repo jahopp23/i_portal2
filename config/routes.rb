@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
 
-  root 'sessions#new'
+  root 'images#index'
   
   get 'sessions/new' => 'sessions#new'
   

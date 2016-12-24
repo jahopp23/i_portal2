@@ -75,7 +75,7 @@ span #register {
 .thumbnail{
     border-style: inset;
     border-color: #ff0066;l
-    border-size: 10px;
+    border-style-width: 10px;
 }
     
 
@@ -135,8 +135,9 @@ d
 }
 
  .navbar-fixed-top{
-    background-color: #ccffcc;
-    border-color: #ccffcc;
+    background-color: #4dff88;
+    border-color: black;
+    border-width: 1px;
 }
 
 .navbar-header .navbar-brand{

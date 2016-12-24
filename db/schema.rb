@@ -15,10 +15,6 @@ ActiveRecord::Schema.define(version: 20161222081732) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "images", force: :cascade do |t|
     t.string   "title"
@@ -30,13 +26,6 @@ ActiveRecord::Schema.define(version: 20161222081732) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "alias"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
